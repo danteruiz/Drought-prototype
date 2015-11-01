@@ -1,0 +1,2 @@
+/usr/bin/ar cq libfile.a  CMakeFiles/file.dir/source/main.cpp.o
+/usr/bin/ranlib libfile.a

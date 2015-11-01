@@ -1,0 +1,2 @@
+/usr/bin/ar cq build/libdrought.a  CMakeFiles/drought.dir/source/main.cpp.o
+/usr/bin/ranlib build/libdrought.a
