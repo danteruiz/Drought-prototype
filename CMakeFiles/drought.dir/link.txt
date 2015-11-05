@@ -1,2 +1,1 @@
-/usr/bin/ar cq build/libdrought.a  CMakeFiles/drought.dir/source/main.cpp.o
-/usr/bin/ranlib build/libdrought.a
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -Wall -Wextra -pedantic -std=c++1y -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/Drought.dir/source/main.cpp.o  -o Drought  /usr/local/lib/libsfml-system.dylib /usr/local/lib/libsfml-window.dylib /usr/local/lib/libsfml-graphics.dylib /usr/local/lib/libsfml-network.dylib /usr/local/lib/libsfml-audio.dylib libfile.a -Wl,-rpath,/usr/local/lib 

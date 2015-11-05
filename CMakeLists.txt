@@ -1,8 +1,8 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 2.8)
 
 project(drought)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -pedantic -std=c++0x")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -pedantic -std=c++1y")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS} ${CMAKE_CXX_FLAGS_DEBUG} -g")
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS} ${CMAKE_CXX_FLAGS_RELEASE} -O2")
 
@@ -24,14 +24,14 @@ include_directories(
 file(GLOB sources "source/*.cpp")
 
 add_library(file STATIC ${sources})
+
 # OpenGL
-find_package(OpenGL REQUIRED)
-include_directories(${OPENGL_INCLUDE_DIR})
-if (OPENGL_FOUND)
-  target_link_libraries(${EXECUTABLE_NAME} ${OPENGL_LIBRARIES})
-  # or: target_link_libraries(${EXECUTABLE_NAME} ${OPENGL_gl_LIBRARY})
-  target_link_libraries(${EXECUTABLE_NAME} m)  # if you use maths.h
-endif()
+#find_package(OPENGL REQUIRED)
+#include_directories(${OPENGL_INCLUDE_DIR})
+#if (OPENGL_FOUND)
+  #target_link_libraries(${EXECUTABLE_NAME} ${OPENGL_LIBRARIES})
+  #target_link_libraries(${EXECUTABLE_NAME} m)
+#endif()
 
 
 find_package(SFML REQUIRED system window graphics network audio)
