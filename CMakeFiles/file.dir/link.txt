@@ -1,2 +1,2 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libfile.a  CMakeFiles/file.dir/source/Block.cpp.o CMakeFiles/file.dir/source/Light.cpp.o CMakeFiles/file.dir/source/LightEngine.cpp.o CMakeFiles/file.dir/source/main.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libfile.a  CMakeFiles/file.dir/source/Block.cpp.o CMakeFiles/file.dir/source/Light.cpp.o CMakeFiles/file.dir/source/LightEngine.cpp.o CMakeFiles/file.dir/source/main.cpp.o CMakeFiles/file.dir/source/Particle.cpp.o CMakeFiles/file.dir/source/Player.cpp.o
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libfile.a

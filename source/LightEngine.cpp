@@ -53,10 +53,17 @@ void LightEngine::shineLight(Light &l, RenderTarget &rt)
         Vector2f end = l.position;
         end.x += cos(radians) * dyn_len;
         end.y += sin(radians) * dyn_len;
-        sf::VertexArray line(sf::Lines,2);
-        line[0].position = l.position;
-        line[1].position = end;
-        rt.draw(line);
+
+        sf::Vertex line[] =
+        {
+          sf::Vertex(l.position),
+          sf::Vertex(end)
+        };
+
+        line[0].color = sf::Color(255,255,100,10);
+        line[1].color = sf::Color(255,255,100,10);
+
+        rt.draw(line,2,sf::Lines);
     }
 }
 
@@ -64,7 +71,7 @@ bool LightEngine::FindDistance::LightHitsBlock(Light &l, Block &b, float cur_ang
 {
     if(b.allowBlock)
     {
-        float distance = Distance(l.position, GetCenter(b.fRect));
+        float distance = Distance(l.position, GetCenter(b.fRect.getGlobalBounds()));
 
         if(l.radius >= distance)
         {
@@ -74,7 +81,7 @@ bool LightEngine::FindDistance::LightHitsBlock(Light &l, Block &b, float cur_ang
               pointspos.x += cos(radians) * distance;
               pointspos.y += sin(radians) * distance;
 
-              if(b.fRect.contains(pointspos))
+              if(b.fRect.getGlobalBounds().contains(pointspos))
               {
                     if(start || distance < shortest)
                     {

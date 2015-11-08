@@ -3,6 +3,6 @@
 Block::Block()
 {
    allowBlock = true;
-   fRect = FloatRect(0,0,0,0);
+   fRect = RectangleShape(Vector2f(0,0));
 }
 

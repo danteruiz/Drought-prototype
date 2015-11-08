@@ -153,12 +153,62 @@ CMakeFiles/file.dir/source/main.cpp.o.provides: CMakeFiles/file.dir/source/main.
 CMakeFiles/file.dir/source/main.cpp.o.provides.build: CMakeFiles/file.dir/source/main.cpp.o
 
 
+CMakeFiles/file.dir/source/Particle.cpp.o: CMakeFiles/file.dir/flags.make
+CMakeFiles/file.dir/source/Particle.cpp.o: source/Particle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danteruiz/Documents/Drought-prototype/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/file.dir/source/Particle.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/file.dir/source/Particle.cpp.o -c /Users/danteruiz/Documents/Drought-prototype/source/Particle.cpp
+
+CMakeFiles/file.dir/source/Particle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/file.dir/source/Particle.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/danteruiz/Documents/Drought-prototype/source/Particle.cpp > CMakeFiles/file.dir/source/Particle.cpp.i
+
+CMakeFiles/file.dir/source/Particle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/file.dir/source/Particle.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/danteruiz/Documents/Drought-prototype/source/Particle.cpp -o CMakeFiles/file.dir/source/Particle.cpp.s
+
+CMakeFiles/file.dir/source/Particle.cpp.o.requires:
+
+.PHONY : CMakeFiles/file.dir/source/Particle.cpp.o.requires
+
+CMakeFiles/file.dir/source/Particle.cpp.o.provides: CMakeFiles/file.dir/source/Particle.cpp.o.requires
+	$(MAKE) -f CMakeFiles/file.dir/build.make CMakeFiles/file.dir/source/Particle.cpp.o.provides.build
+.PHONY : CMakeFiles/file.dir/source/Particle.cpp.o.provides
+
+CMakeFiles/file.dir/source/Particle.cpp.o.provides.build: CMakeFiles/file.dir/source/Particle.cpp.o
+
+
+CMakeFiles/file.dir/source/Player.cpp.o: CMakeFiles/file.dir/flags.make
+CMakeFiles/file.dir/source/Player.cpp.o: source/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danteruiz/Documents/Drought-prototype/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/file.dir/source/Player.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/file.dir/source/Player.cpp.o -c /Users/danteruiz/Documents/Drought-prototype/source/Player.cpp
+
+CMakeFiles/file.dir/source/Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/file.dir/source/Player.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/danteruiz/Documents/Drought-prototype/source/Player.cpp > CMakeFiles/file.dir/source/Player.cpp.i
+
+CMakeFiles/file.dir/source/Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/file.dir/source/Player.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/danteruiz/Documents/Drought-prototype/source/Player.cpp -o CMakeFiles/file.dir/source/Player.cpp.s
+
+CMakeFiles/file.dir/source/Player.cpp.o.requires:
+
+.PHONY : CMakeFiles/file.dir/source/Player.cpp.o.requires
+
+CMakeFiles/file.dir/source/Player.cpp.o.provides: CMakeFiles/file.dir/source/Player.cpp.o.requires
+	$(MAKE) -f CMakeFiles/file.dir/build.make CMakeFiles/file.dir/source/Player.cpp.o.provides.build
+.PHONY : CMakeFiles/file.dir/source/Player.cpp.o.provides
+
+CMakeFiles/file.dir/source/Player.cpp.o.provides.build: CMakeFiles/file.dir/source/Player.cpp.o
+
+
 # Object files for target file
 file_OBJECTS = \
 "CMakeFiles/file.dir/source/Block.cpp.o" \
 "CMakeFiles/file.dir/source/Light.cpp.o" \
 "CMakeFiles/file.dir/source/LightEngine.cpp.o" \
-"CMakeFiles/file.dir/source/main.cpp.o"
+"CMakeFiles/file.dir/source/main.cpp.o" \
+"CMakeFiles/file.dir/source/Particle.cpp.o" \
+"CMakeFiles/file.dir/source/Player.cpp.o"
 
 # External object files for target file
 file_EXTERNAL_OBJECTS =
@@ -167,9 +217,11 @@ libfile.a: CMakeFiles/file.dir/source/Block.cpp.o
 libfile.a: CMakeFiles/file.dir/source/Light.cpp.o
 libfile.a: CMakeFiles/file.dir/source/LightEngine.cpp.o
 libfile.a: CMakeFiles/file.dir/source/main.cpp.o
+libfile.a: CMakeFiles/file.dir/source/Particle.cpp.o
+libfile.a: CMakeFiles/file.dir/source/Player.cpp.o
 libfile.a: CMakeFiles/file.dir/build.make
 libfile.a: CMakeFiles/file.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/danteruiz/Documents/Drought-prototype/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libfile.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/danteruiz/Documents/Drought-prototype/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libfile.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/file.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/file.dir/link.txt --verbose=$(VERBOSE)
 
@@ -182,6 +234,8 @@ CMakeFiles/file.dir/requires: CMakeFiles/file.dir/source/Block.cpp.o.requires
 CMakeFiles/file.dir/requires: CMakeFiles/file.dir/source/Light.cpp.o.requires
 CMakeFiles/file.dir/requires: CMakeFiles/file.dir/source/LightEngine.cpp.o.requires
 CMakeFiles/file.dir/requires: CMakeFiles/file.dir/source/main.cpp.o.requires
+CMakeFiles/file.dir/requires: CMakeFiles/file.dir/source/Particle.cpp.o.requires
+CMakeFiles/file.dir/requires: CMakeFiles/file.dir/source/Player.cpp.o.requires
 
 .PHONY : CMakeFiles/file.dir/requires
 

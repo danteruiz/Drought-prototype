@@ -3,6 +3,9 @@
 
 CMakeFiles/Drought.dir/source/main.cpp.o: source/Block.h
 CMakeFiles/Drought.dir/source/main.cpp.o: source/Light.h
+CMakeFiles/Drought.dir/source/main.cpp.o: source/LightEngine.h
+CMakeFiles/Drought.dir/source/main.cpp.o: source/Particle.h
+CMakeFiles/Drought.dir/source/main.cpp.o: source/Player.h
 CMakeFiles/Drought.dir/source/main.cpp.o: source/main.cpp
 CMakeFiles/Drought.dir/source/main.cpp.o: /usr/local/include/SFML/Config.hpp
 CMakeFiles/Drought.dir/source/main.cpp.o: /usr/local/include/SFML/Graphics.hpp

@@ -217,6 +217,60 @@ source/LightEngine.cpp.s:
 	$(MAKE) -f CMakeFiles/file.dir/build.make CMakeFiles/file.dir/source/LightEngine.cpp.s
 .PHONY : source/LightEngine.cpp.s
 
+source/Particle.o: source/Particle.cpp.o
+
+.PHONY : source/Particle.o
+
+# target to build an object file
+source/Particle.cpp.o:
+	$(MAKE) -f CMakeFiles/file.dir/build.make CMakeFiles/file.dir/source/Particle.cpp.o
+.PHONY : source/Particle.cpp.o
+
+source/Particle.i: source/Particle.cpp.i
+
+.PHONY : source/Particle.i
+
+# target to preprocess a source file
+source/Particle.cpp.i:
+	$(MAKE) -f CMakeFiles/file.dir/build.make CMakeFiles/file.dir/source/Particle.cpp.i
+.PHONY : source/Particle.cpp.i
+
+source/Particle.s: source/Particle.cpp.s
+
+.PHONY : source/Particle.s
+
+# target to generate assembly for a file
+source/Particle.cpp.s:
+	$(MAKE) -f CMakeFiles/file.dir/build.make CMakeFiles/file.dir/source/Particle.cpp.s
+.PHONY : source/Particle.cpp.s
+
+source/Player.o: source/Player.cpp.o
+
+.PHONY : source/Player.o
+
+# target to build an object file
+source/Player.cpp.o:
+	$(MAKE) -f CMakeFiles/file.dir/build.make CMakeFiles/file.dir/source/Player.cpp.o
+.PHONY : source/Player.cpp.o
+
+source/Player.i: source/Player.cpp.i
+
+.PHONY : source/Player.i
+
+# target to preprocess a source file
+source/Player.cpp.i:
+	$(MAKE) -f CMakeFiles/file.dir/build.make CMakeFiles/file.dir/source/Player.cpp.i
+.PHONY : source/Player.cpp.i
+
+source/Player.s: source/Player.cpp.s
+
+.PHONY : source/Player.s
+
+# target to generate assembly for a file
+source/Player.cpp.s:
+	$(MAKE) -f CMakeFiles/file.dir/build.make CMakeFiles/file.dir/source/Player.cpp.s
+.PHONY : source/Player.cpp.s
+
 source/main.o: source/main.cpp.o
 
 .PHONY : source/main.o
@@ -266,6 +320,12 @@ help:
 	@echo "... source/LightEngine.o"
 	@echo "... source/LightEngine.i"
 	@echo "... source/LightEngine.s"
+	@echo "... source/Particle.o"
+	@echo "... source/Particle.i"
+	@echo "... source/Particle.s"
+	@echo "... source/Player.o"
+	@echo "... source/Player.i"
+	@echo "... source/Player.s"
 	@echo "... source/main.o"
 	@echo "... source/main.i"
 	@echo "... source/main.s"

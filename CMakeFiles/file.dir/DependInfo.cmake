@@ -7,6 +7,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/danteruiz/Documents/Drought-prototype/source/Block.cpp" "/Users/danteruiz/Documents/Drought-prototype/CMakeFiles/file.dir/source/Block.cpp.o"
   "/Users/danteruiz/Documents/Drought-prototype/source/Light.cpp" "/Users/danteruiz/Documents/Drought-prototype/CMakeFiles/file.dir/source/Light.cpp.o"
   "/Users/danteruiz/Documents/Drought-prototype/source/LightEngine.cpp" "/Users/danteruiz/Documents/Drought-prototype/CMakeFiles/file.dir/source/LightEngine.cpp.o"
+  "/Users/danteruiz/Documents/Drought-prototype/source/Particle.cpp" "/Users/danteruiz/Documents/Drought-prototype/CMakeFiles/file.dir/source/Particle.cpp.o"
+  "/Users/danteruiz/Documents/Drought-prototype/source/Player.cpp" "/Users/danteruiz/Documents/Drought-prototype/CMakeFiles/file.dir/source/Player.cpp.o"
   "/Users/danteruiz/Documents/Drought-prototype/source/main.cpp" "/Users/danteruiz/Documents/Drought-prototype/CMakeFiles/file.dir/source/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")

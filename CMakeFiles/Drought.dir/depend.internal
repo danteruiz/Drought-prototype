@@ -4,6 +4,9 @@
 CMakeFiles/Drought.dir/source/main.cpp.o
  /Users/danteruiz/Documents/Drought-prototype/source/Block.h
  /Users/danteruiz/Documents/Drought-prototype/source/Light.h
+ /Users/danteruiz/Documents/Drought-prototype/source/LightEngine.h
+ /Users/danteruiz/Documents/Drought-prototype/source/Particle.h
+ /Users/danteruiz/Documents/Drought-prototype/source/Player.h
  /Users/danteruiz/Documents/Drought-prototype/source/main.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
