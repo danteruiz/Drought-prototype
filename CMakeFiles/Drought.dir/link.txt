@@ -1,1 +1,1 @@
-/usr/bin/c++    -Wall -Wextra -pedantic -std=c++0x   CMakeFiles/Drought.dir/source/main.cpp.o  -o Drought -rdynamic -lGLU -lGL -lm -lsfml-system -lsfml-window -lsfml-graphics -lsfml-network -lsfml-audio libfile.a 
+/usr/bin/c++    -Wall -Wextra -pedantic -std=c++1y   CMakeFiles/Drought.dir/source/main.cpp.o  -o Drought -rdynamic -lsfml-system -lsfml-window -lsfml-graphics -lsfml-network -lsfml-audio libfile.a 

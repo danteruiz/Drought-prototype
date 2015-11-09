@@ -9,6 +9,7 @@
 #include "LightEngine.h"
 #include "Player.h"
 #include "Particle.h"
+#include "util.h"
 
 using namespace sf;
 using namespace std;
@@ -23,6 +24,8 @@ int main()
     LightEngine le;
     bool onGround = false;
 
+    sf::Vector2f center = sf::Vector2f(200.0,300.0);
+
     Player player;
     sf::Clock clock;
 
@@ -30,7 +33,7 @@ int main()
 
     Light light;
     light.radius = 2000;
-    light.angleSpeed = 180;
+    light.angleSpeed = 360;
     light.position = Vector2f(600, 100);
     light.angle = 90;
     le.Lights.push_back(light);
@@ -60,7 +63,7 @@ int main()
         while (window.pollEvent(event))
         {
 
-            if(event.key.code == sf::Keyboard::A)
+            if(event.key.code == 0)
                 player.player.move(-5.0 , 0.0);
 
             if(event.key.code == sf::Keyboard::D)
@@ -69,15 +72,26 @@ int main()
             if(event.key.code == sf::Keyboard::Space)
                 player.player.move(0.0, -5.0);
 
-            if (event.key.code == sf::Keyboard::Escape)
+            if (event.type == sf::Event::Closed)
+            {
+            	
                 window.close();
+            }
+
+            
         }
 
+        float mouseX = sf::Mouse::getPosition(window).x;
+        float mouseY = sf::Mouse::getPosition(window).y;
+        sf::Vector2f mousePos = sf::Vector2f(mouseX,mouseY);
+        float angle = util::getAngle(center, mousePos);
 
+       
+       
         sf::Time elapsed = clock.restart();
-        particles.update(elapsed);
+        particles.update(elapsed, angle);
 
-
+        
         window.clear();
         window.draw(player.player);
         window.draw(particles);
@@ -85,6 +99,8 @@ int main()
         le.Step(window);
         window.display();
     }
+
+    cout << " closing " << endl;
 
     return 0;
 

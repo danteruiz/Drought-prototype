@@ -81,8 +81,6 @@ Drought_EXTERNAL_OBJECTS =
 
 Drought: CMakeFiles/Drought.dir/source/main.cpp.o
 Drought: CMakeFiles/Drought.dir/build.make
-Drought: /usr/lib/x86_64-linux-gnu/libGLU.so
-Drought: /usr/lib/x86_64-linux-gnu/libGL.so
 Drought: /usr/lib/x86_64-linux-gnu/libsfml-system.so
 Drought: /usr/lib/x86_64-linux-gnu/libsfml-window.so
 Drought: /usr/lib/x86_64-linux-gnu/libsfml-graphics.so

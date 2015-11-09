@@ -7,6 +7,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 #include <SFML/Graphics/RectangleShape.hpp>
+#include "util.h"
 
 using namespace std;
 class ParticleSystem: public sf::Drawable, public sf::Transformable
@@ -16,13 +17,13 @@ public:
   ParticleSystem(unsigned count);
 
   void setEmitter(sf::Vector2f position);
-  void update(sf::Time elapsed);
+  void update(sf::Time elapsed, float angle);
 
 private:
   virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const;
 
 
-  void resetParticle(size_t index);
+  void resetParticle(size_t index, float direction);
 
   struct Particle
   {
