@@ -11,6 +11,7 @@
 #include <SFML/Window/Mouse.hpp>
 
 #include "util.h"
+#include "LightEngine.h"
 
 using namespace std;
 class ParticleSystem: public sf::Drawable, public sf::Transformable
@@ -22,7 +23,7 @@ public:
   float moveY;
 
   void setEmitter(sf::Vector2f position);
-  void update(sf::Time elapsed, float angle);
+  void update(sf::Time elapsed, float angle, LightEngine &le);
 
 private:
   virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const;
@@ -35,6 +36,7 @@ private:
     sf::Color color;
     sf::Vector2f velocity;
     sf::Time lifetime;
+    void checkCollision(LightEngine &le);
   };
 
   vector<Particle> m_particles;

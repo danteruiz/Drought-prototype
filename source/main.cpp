@@ -16,11 +16,19 @@ using namespace std;
 
 void setBlocks(LightEngine &le)
 {
-    Block block;
-    block.fRect = RectangleShape(Vector2f(600,70));
+    Block block(true);
+    block.fRect = RectangleShape(Vector2f(70,70));
     block.fRect.setPosition(200,700);
     block.fRect.setFillColor(sf::Color(255,0,0));
     le.Blocks.push_back(block);
+
+
+    Block block2(false);
+    block2.fRect = RectangleShape(Vector2f(150,70));
+    block2.fRect.setPosition(300,400);
+    block2.fRect.setFillColor(sf::Color(255,255,0));
+    le.Blocks.push_back(block2);
+
 
 }
 
@@ -40,7 +48,7 @@ int main()
 
     Light light;
     light.radius = 2000;
-    light.angleSpeed = 360;
+    light.angleSpeed = 120;
     light.position = Vector2f(600, 100);
     light.angle = 90;
     le.Lights.push_back(light);
@@ -57,12 +65,12 @@ int main()
         	float mouseY = sf::Mouse::getPosition(window).y;
        	 	sf::Vector2f mousePos = sf::Vector2f(mouseX,mouseY);
         	float angle = util::getAngle(player.player.getPosition(), mousePos);
-    		
+
     		sf::Time elapsed = clock.restart();
-            
+
             player.update(le,elapsed, angle);
             player.HandleEvents();
-            
+
             while (window.pollEvent(event))
             {
 
@@ -76,22 +84,22 @@ int main()
 
             }
 
-      
+
         ;
-        
 
 
-       
-        
+
+
+
 
 
         window.clear();
         window.draw(player.player);
         window.draw(player.getParticle());
-        window.draw(le.Blocks[0].fRect);
+        window.draw(le);
         le.Step(window);
         window.display();
-     
+
     }
 
     cout << " closing " << endl;

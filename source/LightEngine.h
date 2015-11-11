@@ -4,13 +4,14 @@
 #include "Light.h"
 #include "Block.h"
 #include <vector>
+#include <iostream>
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/Shape.hpp>
 
 using namespace std;
 using namespace sf;
 
-class LightEngine
+class LightEngine: public sf::Drawable, public sf::Transformable
 {
 public:
   void Step(RenderTarget &rt);
@@ -18,6 +19,8 @@ public:
   vector <Block> Blocks;
 
 private:
+
+  virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const;
   void shineLight( Light &lig, RenderTarget &rt);
 
   static const float Distance(const Vector2f &p1, const Vector2f &p2);

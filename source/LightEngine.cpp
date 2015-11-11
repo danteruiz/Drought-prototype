@@ -96,3 +96,18 @@ bool LightEngine::FindDistance::LightHitsBlock(Light &l, Block &b, float cur_ang
     return false;
 }
 
+
+void LightEngine::draw(sf::RenderTarget &target, sf::RenderStates states) const
+{
+        states.transform *= getTransform();
+
+        states.texture = NULL;
+
+        for(unsigned i = 0; i < Blocks.size();i++)
+        {
+          cout << Blocks.size() << endl;
+          target.draw(Blocks[i].fRect, states);
+
+        }
+}
+
