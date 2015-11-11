@@ -18,7 +18,7 @@ void setBlocks(LightEngine &le)
 {
     Block block;
     block.fRect = RectangleShape(Vector2f(600,70));
-    block.fRect.setPosition(200,300);
+    block.fRect.setPosition(200,700);
     block.fRect.setFillColor(sf::Color(255,0,0));
     le.Blocks.push_back(block);
 
@@ -29,11 +29,10 @@ int main()
 
     RenderWindow window(VideoMode(1200, 800), "SFML works!");
     Event event;
-    //const sf::Input Input = window.GetInput();
-    //ParticleSystem particles(1000);
+    sf::Vector2f center = sf::Vector2f(300.0,300.0);
 
     LightEngine le;
-    Player player;
+    Player player(50);
     player.player.setPosition(200,200);
 
 
@@ -49,18 +48,21 @@ int main()
     setBlocks(le);
 
     sf::Clock clock;
-    sf:: Time accumulator = sf::Time::Zero;
-    sf::Time ups = sf::seconds(1.f/60.f);
+    ;
 
 
     while (window.isOpen())
     {
-
-        while(accumulator > ups)
-        {
-            accumulator -= ups;
-            player.update(le);
-             player.HandleEvents();
+    		float mouseX = sf::Mouse::getPosition(window).x;
+        	float mouseY = sf::Mouse::getPosition(window).y;
+       	 	sf::Vector2f mousePos = sf::Vector2f(mouseX,mouseY);
+        	float angle = util::getAngle(player.player.getPosition(), mousePos);
+    		
+    		sf::Time elapsed = clock.restart();
+            
+            player.update(le,elapsed, angle);
+            player.HandleEvents();
+            
             while (window.pollEvent(event))
             {
 
@@ -74,25 +76,22 @@ int main()
 
             }
 
-        }
-        /*float mouseX = sf::Mouse::getPosition(window).x;
-        float mouseY = sf::Mouse::getPosition(window).y;
-        sf::Vector2f mousePos = sf::Vector2f(mouseX,mouseY);
-        float angle = util::getAngle(center, mousePos);
-        */
+      
+        ;
+        
 
 
-        sf::Time elapsed = clock.restart();
-        //particles.update(elapsed, angle);
+       
+        
 
 
         window.clear();
         window.draw(player.player);
-        //window.draw(particles);
+        window.draw(player.getParticle());
         window.draw(le.Blocks[0].fRect);
         le.Step(window);
         window.display();
-        accumulator += clock.restart();
+     
     }
 
     cout << " closing " << endl;

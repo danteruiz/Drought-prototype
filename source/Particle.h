@@ -4,9 +4,12 @@
 
 #include <vector>
 #include <math.h>
+
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 #include <SFML/Graphics/RectangleShape.hpp>
+#include <SFML/Window/Mouse.hpp>
+
 #include "util.h"
 
 using namespace std;
@@ -15,13 +18,14 @@ class ParticleSystem: public sf::Drawable, public sf::Transformable
 
 public:
   ParticleSystem(unsigned count);
+  float moveX;
+  float moveY;
 
   void setEmitter(sf::Vector2f position);
   void update(sf::Time elapsed, float angle);
 
 private:
   virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const;
-
 
   void resetParticle(size_t index, float direction);
 
@@ -34,8 +38,6 @@ private:
   };
 
   vector<Particle> m_particles;
-  sf::VertexArray m_vertices;
-
   sf::Time m_lifetime;
   sf::Vector2f m_emitter;
 

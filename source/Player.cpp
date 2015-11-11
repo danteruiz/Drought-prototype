@@ -2,7 +2,7 @@
 #include <math.h>
 
 
-Player::Player()
+Player::Player(unsigned count):particle(count)
 {
 
   isDead = false;
@@ -32,14 +32,15 @@ void Player::HandleEvents()
 
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
         {
-          startJump();
+        	if(onGround)
+          		startJump();
         }
 
 }
 
-
-void Player::update(LightEngine &le)
+void Player::update(LightEngine &le, sf::Time elapsed,float angle)
 {
+	  particle.setEmitter(player.getPosition());
       if(!onGround)
       {
         velocityY = acceleration;
@@ -58,6 +59,11 @@ void Player::update(LightEngine &le)
 
       }
 
+
+      particle.update(elapsed, angle);
+
+
+
 }
 
 void Player::startJump()
@@ -67,9 +73,13 @@ void Player::startJump()
       onGround = false;
 }
 
-
 void Player::endJump()
 {
     if(velocityY < -6.0)
       velocityY = -6.0;
+}
+
+ParticleSystem Player::getParticle()
+{
+	return particle;
 }

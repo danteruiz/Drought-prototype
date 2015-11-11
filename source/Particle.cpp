@@ -1,12 +1,11 @@
 #include "Particle.h"
 
-ParticleSystem::ParticleSystem(unsigned count):m_particles(count), m_vertices(sf::Points, count)
+ParticleSystem::ParticleSystem(unsigned count):m_particles(count)
 {
   m_emitter = sf::Vector2f(200.0,300.0);
-  m_lifetime = sf::seconds(2);
+  m_lifetime = sf::seconds(.001);
 
 }
-
 
 void ParticleSystem::setEmitter(sf::Vector2f position)
 {
@@ -32,17 +31,24 @@ void ParticleSystem::update(sf::Time elapsed, float angle)
 {
   for (std::size_t i = 0; i < m_particles.size(); ++i)
         {
-            
+
             Particle& p = m_particles[i];
             p.lifetime -= elapsed;
 
             
             if (p.lifetime <= sf::Time::Zero)
-                resetParticle(i, angle);
+                if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+                    resetParticle(i, angle);
 
             float speed = m_particles[i].velocity.x;
-            float moveX = 10 * cos(angle * PI / 180);
-            float moveY = 10 * sin (angle * PI / 180);
+            if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+            {
+                moveX = 10 * cos(angle * PI / 180);
+                moveY = 10 * sin (angle * PI / 180);  
+            }
+            
+            
+            
             m_particles[i].particle.move(moveX,moveY);
 
             
@@ -51,7 +57,6 @@ void ParticleSystem::update(sf::Time elapsed, float angle)
             m_particles[i].color.r = 30;
         }
 }
-
 
 void ParticleSystem::resetParticle(size_t index, float direction)
 {

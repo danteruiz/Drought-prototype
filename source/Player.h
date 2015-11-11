@@ -5,6 +5,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Graphics/RectangleShape.hpp>
 #include <SFML/System.hpp>
+#include <SFML/Window/Mouse.hpp>
 #include <vector>
 #include "Particle.h"
 #include "LightEngine.h"
@@ -13,8 +14,7 @@ using namespace sf;
 class Player
 {
   private:
-    ParticleSystem particles(500);
-
+    ParticleSystem particle;
     bool isDead;
     bool onGround;
     float velocityX;
@@ -27,11 +27,13 @@ class Player
     void endJump();
 
 
+
   public:
     RectangleShape player;
-    Player();
+    Player(unsigned count);
     void HandleEvents();
-    void update(LightEngine &le);
+    void update(LightEngine &le, sf::Time elasped, float angle);
+    ParticleSystem getParticle();
 
 };
 

@@ -1,11 +1,11 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/file.dir/source/Block.cpp.o"
-  "CMakeFiles/file.dir/source/Light.cpp.o"
   "CMakeFiles/file.dir/source/LightEngine.cpp.o"
+  "CMakeFiles/file.dir/source/Light.cpp.o"
+  "CMakeFiles/file.dir/source/util.cpp.o"
+  "CMakeFiles/file.dir/source/Block.cpp.o"
   "CMakeFiles/file.dir/source/main.cpp.o"
   "CMakeFiles/file.dir/source/Particle.cpp.o"
   "CMakeFiles/file.dir/source/Player.cpp.o"
-  "CMakeFiles/file.dir/source/util.cpp.o"
   "libfile.pdb"
   "libfile.a"
 )
