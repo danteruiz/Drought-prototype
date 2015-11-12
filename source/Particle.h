@@ -36,7 +36,6 @@ private:
     sf::Color color;
     sf::Vector2f velocity;
     sf::Time lifetime;
-    void checkCollision(LightEngine &le);
   };
 
   vector<Particle> m_particles;

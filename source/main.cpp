@@ -46,13 +46,13 @@ void setBlocks(LightEngine &le)
 
     Block block5(false);
     block5.fRect = RectangleShape(Vector2f(100,40));
-    block5.fRect.setPosition(650, 560);
+    block5.fRect.setPosition(650, 500);
     block5.fRect.setFillColor(sf::Color(255,255,0));
     le.Blocks.push_back(block5);
 
     Block block6(false);
     block6.fRect = RectangleShape(Vector2f(100,40));
-    block6.fRect.setPosition(770, 740);
+    block6.fRect.setPosition(730, 700);
 
     block6.fRect.setFillColor(sf::Color(255,255,0));
     le.Blocks.push_back(block6);

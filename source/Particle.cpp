@@ -35,7 +35,15 @@ void ParticleSystem::update(sf::Time elapsed, float angle, LightEngine &le)
             Particle& p = m_particles[i];
             p.lifetime -= elapsed;
 
-            p.checkCollision(le);
+             for( unsigned i = 0; i < le.Blocks.size(); i++)
+                {
+                    if(p.particle.getGlobalBounds().intersects(le.Blocks[i].fRect.getGlobalBounds()))
+                        {
+                            
+                            le.Blocks[i].update(p.particle.getPosition());
+                            resetParticle(i, angle);
+                        }
+                }           
 
 
             if (p.lifetime <= sf::Time::Zero)
@@ -70,17 +78,3 @@ void ParticleSystem::resetParticle(size_t index, float direction)
         // reset the position of the corresponding vertex
         m_particles[index].particle.setPosition(m_emitter);
 }
-
-
-void ParticleSystem::Particle::checkCollision(LightEngine &le)
-{
-    for( unsigned i = 0; i < le.Blocks.size(); i++)
-    {
-        if(particle.getGlobalBounds().intersects(le.Blocks[i].fRect.getGlobalBounds()))
-        {
-            lifetime = sf::Time::Zero;
-            le.Blocks[i].update(particle.getPosition());
-        }
-    }
-}
-
