@@ -37,6 +37,7 @@ void ParticleSystem::update(sf::Time elapsed, float angle, LightEngine &le)
 
             p.checkCollision(le);
 
+
             if (p.lifetime <= sf::Time::Zero)
                 if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
                     resetParticle(i, angle);
@@ -77,6 +78,7 @@ void ParticleSystem::Particle::checkCollision(LightEngine &le)
     {
         if(particle.getGlobalBounds().intersects(le.Blocks[i].fRect.getGlobalBounds()))
         {
+            lifetime = sf::Time::Zero;
             le.Blocks[i].update(particle.getPosition());
         }
     }

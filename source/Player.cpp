@@ -22,12 +22,12 @@ void Player::HandleEvents()
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
         {
-            player.move(-10.0, 0.0);
+            player.move(-5.0, 0.0);
         }
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
         {
-            player.move(10.0, 0.0);
+            player.move(5.0, 0.0);
         }
 
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space))

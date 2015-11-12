@@ -17,39 +17,84 @@ using namespace std;
 void setBlocks(LightEngine &le)
 {
     Block block(true);
-    block.fRect = RectangleShape(Vector2f(70,70));
-    block.fRect.setPosition(200,700);
+    block.fRect = RectangleShape(Vector2f(150,30));
+    block.fRect.setPosition(73,756);
     block.fRect.setFillColor(sf::Color(255,0,0));
     le.Blocks.push_back(block);
 
 
     Block block2(false);
-    block2.fRect = RectangleShape(Vector2f(150,70));
-    block2.fRect.setPosition(300,400);
+    block2.fRect = RectangleShape(Vector2f(150,40));
+    block2.fRect.setPosition(244,625);
     block2.fRect.setFillColor(sf::Color(255,255,0));
     le.Blocks.push_back(block2);
 
 
+    Block block3(false);
+    block3.fRect = RectangleShape(Vector2f(300,40));
+    block3.fRect.setPosition(430,741);
+    block3.fRect.setFillColor(sf::Color(255,255,0));
+    le.Blocks.push_back(block3);
+
+
+    Block block4(false);
+    block4.fRect = RectangleShape(Vector2f(100,40));
+    block4.fRect.setPosition(601, 572);
+    block4.fRect.setFillColor(sf::Color(255,255,0));
+    le.Blocks.push_back(block4);
+
+
+    Block block5(false);
+    block5.fRect = RectangleShape(Vector2f(100,40));
+    block5.fRect.setPosition(687, 656);
+    block5.fRect.setFillColor(sf::Color(255,255,0));
+    le.Blocks.push_back(block5);
+
+    Block block6(false);
+    block6.fRect = RectangleShape(Vector2f(100,40));
+    block6.fRect.setPosition(770, 760);
+    
+    block6.fRect.setFillColor(sf::Color(255,255,0));
+    le.Blocks.push_back(block6);
+
+
+    Block block7(false);
+    block7.fRect = RectangleShape(Vector2f(100,40));
+    block7.fRect.setPosition(987, 549);
+    block7.fRect.setFillColor(sf::Color(255,255,0));
+    le.Blocks.push_back(block7);
+
+
+    Block block8(false);
+    block8.fRect = RectangleShape(Vector2f(100,40));
+    block8.fRect.setPosition(1098, 764);
+    block8.fRect.setFillColor(sf::Color(255,255,0));
+    le.Blocks.push_back(block8);
+
+
+    Block block9(false);
+    block9.fRect = RectangleShape(Vector2f(100,40));
+    block9.fRect.setPosition(1365, 548);
+    block9.fRect.setFillColor(sf::Color(255,255,0));
+    le.Blocks.push_back(block9);
 }
+
+
 
 int main()
 {
 
-    RenderWindow window(VideoMode(1200, 800), "SFML works!");
+    RenderWindow window(VideoMode(1600, 800), "Drought");
     Event event;
-    sf::Vector2f center = sf::Vector2f(300.0,300.0);
 
     LightEngine le;
     Player player(50);
-    player.player.setPosition(200,200);
-
-
-    player.player.setPosition(200,200);
+    player.player.setPosition(86,757);
 
     Light light;
-    light.radius = 2000;
-    light.angleSpeed = 120;
-    light.position = Vector2f(600, 100);
+    light.radius = 1300;
+    light.angleSpeed = 180;
+    light.position = Vector2f(800, -50);
     light.angle = 90;
     le.Lights.push_back(light);
 
@@ -83,16 +128,7 @@ int main()
 
 
             }
-
-
-        ;
-
-
-
-
-
-
-
+        cout << " x position  = " << mouseX << " ::::: y position = " << mouseY << endl;
         window.clear();
         window.draw(player.player);
         window.draw(player.getParticle());
@@ -107,7 +143,3 @@ int main()
     return 0;
 
 }
-
-
-
-

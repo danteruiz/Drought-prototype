@@ -105,7 +105,7 @@ void LightEngine::draw(sf::RenderTarget &target, sf::RenderStates states) const
 
         for(unsigned i = 0; i < Blocks.size();i++)
         {
-          cout << Blocks.size() << endl;
+          
           target.draw(Blocks[i].fRect, states);
 
         }

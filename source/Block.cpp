@@ -10,7 +10,18 @@ Block::Block(bool isFixed)
 
 void Block::update(sf::Vector2f position)
 {
-    cout << "doing block update" << endl;
+
+    if(!fixed)
+    {
+    	if(position.x < fRect.getPosition().x + fRect.getSize().x /2)
+    	{
+    		fRect.move(6.0, 0.0);
+    	}else if(position.x > fRect.getPosition().x + (fRect.getSize().x /2))
+    	{
+    		fRect.move(-6.0, 0.0);
+    	
+    	}
+    }
 
 }
 
