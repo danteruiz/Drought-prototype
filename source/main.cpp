@@ -18,42 +18,42 @@ void setBlocks(LightEngine &le)
 {
     Block block(true);
     block.fRect = RectangleShape(Vector2f(150,30));
-    block.fRect.setPosition(73,756);
+    block.fRect.setPosition(73,740);
     block.fRect.setFillColor(sf::Color(255,0,0));
     le.Blocks.push_back(block);
 
 
     Block block2(false);
     block2.fRect = RectangleShape(Vector2f(150,40));
-    block2.fRect.setPosition(244,625);
+    block2.fRect.setPosition(244,500);
     block2.fRect.setFillColor(sf::Color(255,255,0));
     le.Blocks.push_back(block2);
 
 
     Block block3(false);
     block3.fRect = RectangleShape(Vector2f(300,40));
-    block3.fRect.setPosition(430,741);
+    block3.fRect.setPosition(330,740);
     block3.fRect.setFillColor(sf::Color(255,255,0));
     le.Blocks.push_back(block3);
 
 
     Block block4(false);
     block4.fRect = RectangleShape(Vector2f(100,40));
-    block4.fRect.setPosition(601, 572);
+    block4.fRect.setPosition(500, 550);
     block4.fRect.setFillColor(sf::Color(255,255,0));
     le.Blocks.push_back(block4);
 
 
     Block block5(false);
     block5.fRect = RectangleShape(Vector2f(100,40));
-    block5.fRect.setPosition(687, 656);
+    block5.fRect.setPosition(650, 560);
     block5.fRect.setFillColor(sf::Color(255,255,0));
     le.Blocks.push_back(block5);
 
     Block block6(false);
     block6.fRect = RectangleShape(Vector2f(100,40));
-    block6.fRect.setPosition(770, 760);
-    
+    block6.fRect.setPosition(770, 740);
+
     block6.fRect.setFillColor(sf::Color(255,255,0));
     le.Blocks.push_back(block6);
 
@@ -67,7 +67,7 @@ void setBlocks(LightEngine &le)
 
     Block block8(false);
     block8.fRect = RectangleShape(Vector2f(100,40));
-    block8.fRect.setPosition(1098, 764);
+    block8.fRect.setPosition(1098, 740);
     block8.fRect.setFillColor(sf::Color(255,255,0));
     le.Blocks.push_back(block8);
 
@@ -89,7 +89,7 @@ int main()
 
     LightEngine le;
     Player player(50);
-    player.player.setPosition(86,757);
+    player.player.setPosition(86,730);
 
     Light light;
     light.radius = 1300;

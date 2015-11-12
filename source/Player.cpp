@@ -7,11 +7,11 @@ Player::Player(unsigned count):particle(count)
 
   isDead = false;
   onGround = false;
-  gravity = 0.6;
+  gravity = 1.5;
   velocityY = 4.0;
   velocityX = 4.0;
-  acceleration = -3.0;
-  jumpSpeed = -12;
+  acceleration = -5.0;
+  jumpSpeed = -15;
 
   player = RectangleShape(Vector2f(20,20));
 
