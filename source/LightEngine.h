@@ -18,6 +18,7 @@ public:
   vector <Light> Lights;
   vector <Block> Blocks;
 
+
 private:
 
   virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const;

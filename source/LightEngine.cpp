@@ -40,6 +40,7 @@ void LightEngine::shineLight(Light &l, RenderTarget &rt)
         findDis.start = true;
         findDis.shortest = 0;
 
+        //Players[0].inSun(findDis.LightHitsPlayer(l, Players[0], current_angle, dyn_len));
         if(l.dynamic)
         {
             for(unsigned i = 0; i < Blocks.size(); i++)
@@ -105,7 +106,7 @@ void LightEngine::draw(sf::RenderTarget &target, sf::RenderStates states) const
 
         for(unsigned i = 0; i < Blocks.size();i++)
         {
-          
+
           target.draw(Blocks[i].fRect, states);
 
         }

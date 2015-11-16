@@ -128,12 +128,17 @@ int main()
 
 
             }
-        cout << " x position  = " << mouseX << " ::::: y position = " << mouseY << endl;
+        //cout << " x position  = " << mouseX << " ::::: y position = " << mouseY << endl;
         window.clear();
         window.draw(player.player);
         window.draw(player.getParticle());
         window.draw(le);
         le.Step(window);
+        Image screen = window.capture();
+        Color Pixel = screen.getPixel(player.player.getPosition().x, player.player.getPosition().y);
+
+        player.isHit(Pixel);
+
         window.display();
 
     }

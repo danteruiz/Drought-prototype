@@ -39,11 +39,11 @@ void ParticleSystem::update(sf::Time elapsed, float angle, LightEngine &le)
                 {
                     if(p.particle.getGlobalBounds().intersects(le.Blocks[i].fRect.getGlobalBounds()))
                         {
-                            
+
                             le.Blocks[i].update(p.particle.getPosition());
                             resetParticle(i, angle);
                         }
-                }           
+                }
 
 
             if (p.lifetime <= sf::Time::Zero)

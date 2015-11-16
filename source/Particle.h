@@ -14,6 +14,7 @@
 #include "LightEngine.h"
 
 using namespace std;
+
 class ParticleSystem: public sf::Drawable, public sf::Transformable
 {
 

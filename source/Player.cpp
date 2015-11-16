@@ -66,6 +66,10 @@ void Player::update(LightEngine &le, sf::Time elapsed,float angle)
 
 
       particle.update(elapsed, angle, le);
+      if(player.getPosition().y >= 800)
+      {
+          player.setPosition(86,700);
+      }
 
 
 
@@ -87,4 +91,15 @@ void Player::endJump()
 ParticleSystem Player::getParticle()
 {
 	return particle;
+}
+
+
+void Player::isHit(Color pixel)
+{
+
+  if(pixel == Color(255,255,100,10))
+  {
+    cout << "hit " << endl;
+    player.scale(-0.5, -0.5);
+  }
 }

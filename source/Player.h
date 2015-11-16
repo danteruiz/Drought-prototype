@@ -9,7 +9,6 @@
 #include <vector>
 #include "Particle.h"
 #include "LightEngine.h"
-
 using namespace sf;
 class Player
 {
@@ -33,6 +32,7 @@ class Player
     Player(unsigned count);
     void HandleEvents();
     void update(LightEngine &le, sf::Time elasped, float angle);
+    void isHit(Color pixel);
     ParticleSystem getParticle();
 
 };
